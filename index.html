@@ -210,6 +210,8 @@ html.ko .p-title{letter-spacing:-.025em}
 .p-sub{color:var(--ink-2);font-size:16px;margin:0}
 .p-authors{font-size:14.5px;color:var(--muted);margin:8px 0 0}
 .p-authors b{color:var(--ink);font-weight:600}
+.p-links{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.p-links .btn{height:34px;padding:0 14px;font-size:14px}
 .rq{margin:20px 0 0;padding:14px 18px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;font-size:17px;line-height:1.5;color:var(--ink);font-weight:500}
 .rq small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:400;margin-bottom:4px}
 .p-pitch{font-size:17px;color:var(--ink-2);margin:18px 0 22px;max-width:46em}
@@ -558,6 +560,7 @@ footer button:hover{color:var(--ink)}
         <h2 class="p-title" tabindex="-1">Recipe-Adaptive Data Selection for Efficient LLM Fine-Tuning</h2>
         <p class="p-sub">ShallowFrontier · Energy-Efficient LLM Data Selection via Asymmetric Prefix Extrapolation</p>
         <p class="p-authors"><b>Seungho Lee</b>, Suchan Yang</p>
+        <p class="p-links"><a class="btn" href="https://github.com/hufs24lsh/data-selection" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg><span class="en">Code</span><span class="ko">코드</span></a><a class="btn" href="assets/ShallowFrontier_poster.pdf" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg><span class="en">Poster</span><span class="ko">포스터</span></a></p>
         <p class="rq"><small><span class="en">Research question</span><span class="ko">연구 질문</span></small><span class="en">Under a given fine-tuning recipe, which training data does a model need, and how much of it?</span><span class="ko">주어진 fine-tuning 설정에서 모델에게 어떤 학습 데이터가, 얼마나 필요한가?</span></p>
         <p class="p-pitch"><span class="en">Data selection is meant to save compute, but the best selection rule changes with the training recipe, and strong baselines repeat calibrate → select → train rounds whose cost is rarely counted. This project reads each data group’s learning phase from its gradient noise after a single shallow calibration, and decides what to keep and how much, without domain labels. Every method is compared by accuracy and by end-to-end GPU energy, selection included.</span><span class="ko">데이터 선택은 계산을 아끼기 위한 것이지만, 가장 좋은 선택 규칙은 학습 설정에 따라 바뀌고, 강력한 기준선은 비용이 잘 계산되지 않는 ‘보정 → 선택 → 학습’ 회차를 반복합니다. 이 연구는 얕은 보정을 한 번만 한 뒤 데이터 묶음마다 gradient noise로 학습 국면을 읽어, 도메인 라벨 없이 무엇을 얼마나 남길지 정합니다. 모든 방법은 정확도와 함께 선택 과정까지 포함한 전 과정 GPU 에너지로 비교합니다.</span></p>
       </header>
