@@ -164,6 +164,21 @@ html.ko .sec h2{letter-spacing:-.02em}
 .entry li{margin-bottom:4px}
 .logo{flex:none;width:48px;height:48px;border-radius:50%;background:#fff;padding:2px;border:1px solid var(--line);object-fit:contain}
 @media(max-width:600px){.entry{flex-wrap:wrap}.entry .when{order:-1;width:100%;padding:0}}
+.entry.fold{display:block;padding:0}
+.fold-btn{display:flex;align-items:flex-start;gap:16px;width:100%;padding:18px 20px;border:0;border-radius:14px;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.fold-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fold-btn .t,.fold-btn .s{display:block}
+.fold .chev{margin-top:4px;color:var(--muted);transition:transform .3s ease,color .2s}
+.fold-btn:hover .chev{color:var(--ink)}
+.fold.open .chev{transform:rotate(180deg)}
+.fold-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.fold.open .fold-body{grid-template-rows:1fr}
+.fold-inner{overflow:hidden;visibility:hidden;transition:visibility .35s}
+.fold.open .fold-inner{visibility:visible;transition:visibility 0s}
+.entry .tl{list-style:none;margin:0;padding:2px 20px 18px;display:grid;gap:8px;font-size:14.5px}
+.entry .tl li{display:grid;grid-template-columns:13.5em minmax(0,1fr);gap:12px;margin:0;line-height:1.5}
+.tl-when{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:2px}
+@media(max-width:600px){.fold-btn{flex-wrap:wrap}.entry .tl li{grid-template-columns:minmax(0,1fr);gap:2px}}
 
 /* project cards on the home page */
 .filters{display:flex;flex-wrap:wrap;gap:8px}
@@ -511,6 +526,13 @@ footer button:hover{color:var(--ink)}
       </div>
       <div class="entry">
         <div class="e-main">
+          <div class="t"><span class="en">HUFS Merit Scholarship (Honorary)</span><span class="ko">한국외국어대학교 성적명예</span></div>
+          <div class="s"><span class="en">HUFS Talent Scholarship (Spring 2026) · Dean’s Scholarship (Fall 2026) · Conferred as honors since tuition was fully covered by the National Scholarship</span><span class="ko">외대인재 (2026-1학기) · 학장 (2026-2학기) · 국가우수장학금으로 등록금 전액이 지원되어 성적장학금 대신 명예로 수여</span></div>
+        </div>
+        <div class="when">2026</div>
+      </div>
+      <div class="entry">
+        <div class="e-main">
           <div class="t"><span class="en">Encouragement Award, SOWON HOPE Expo 2025</span><span class="ko">장려상, 2025 소원 H.O.P.E. 창의보조공학 경진대회</span></div>
           <div class="s"><span class="en">Kwangwoon Univ. · for a visual speech recognition system with neural post-editing</span><span class="ko">광운대학교 인공지능융합대학 · 립리딩 기반 음성 인식과 후처리 모델</span></div>
         </div>
@@ -542,6 +564,35 @@ footer button:hover{color:var(--ink)}
           </ul>
         </div>
         <div class="when"><span class="en">Jan 2026 – Present</span><span class="ko">2026.01 – 현재</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section class="sec" id="activities" aria-labelledby="activities-h">
+  <div class="wrap">
+    <h2 id="activities-h" class="reveal"><span class="en">Activities</span><span class="ko">활동</span></h2>
+    <div class="entries reveal">
+      <div class="entry fold">
+        <button class="fold-btn" type="button" aria-expanded="false" aria-controls="council-more">
+          <span class="e-main">
+            <span class="t"><span class="en">Student Council</span><span class="ko">학생회 활동</span></span>
+            <span class="s"><span class="en">Deputy Director, Welfare &amp; Communication Bureau · 1st Student Council of the College of AI Convergence, HUFS</span><span class="ko">제1대 AI융합대학 학생회 복지소통국 차장 · 한국외국어대학교</span></span>
+          </span>
+          <span class="when">2024 – 2026</span>
+          <svg class="i chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="fold-body" id="council-more">
+          <div class="fold-inner">
+            <ul class="tl">
+              <li><span class="tl-when"><span class="en">Spring 2024</span><span class="ko">2024-1학기</span></span><span><span class="en">Member, provisional student council, Division of Language &amp; AI</span><span class="ko">Language&amp;AI 융합학부 임시학생회 단원</span></span></li>
+              <li><span class="tl-when"><span class="en">Winter 2024</span><span class="ko">2024 겨울학기</span></span><span><span class="en">Campaign staff, ‘rAIse’ campaign for the college’s first student council election</span><span class="ko">제1대 AI융합대학 학생회장단 선거운동본부 ‘rAIse’ 본부원</span></span></li>
+              <li><span class="tl-when"><span class="en">Feb 2025</span><span class="ko">2025.02</span></span><span><span class="en">Organizer, freshman orientation</span><span class="ko">새내기 새로배움터 주체</span></span></li>
+              <li><span class="tl-when"><span class="en">Spring 2025 – Spring 2026</span><span class="ko">2025-1 – 2026-1학기</span></span><span><span class="en">Deputy Director, Welfare &amp; Communication Bureau, 1st Student Council (‘rAIse’)</span><span class="ko">제1대 AI융합대학 학생회 ‘rAIse’ 복지소통국 차장</span></span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1041,6 +1092,11 @@ footer button:hover{color:var(--ink)}
   showVSR(false);
   redraws.push(() => { glossEl.textContent = lang === 'en' ? VSR[vi].gloss : ''; });
   new IntersectionObserver(([e], obs) => { if (e.isIntersecting) { showVSR(true); obs.disconnect(); } }, { threshold: 0.5 }).observe($('#vsr-fig'));
+
+  /* ---------- activities: expandable entry ---------- */
+  $$('.fold-btn').forEach(b => b.addEventListener('click', () => {
+    b.setAttribute('aria-expanded', String(b.closest('.fold').classList.toggle('open')));
+  }));
 
   /* ---------- project list: filter by research interest ---------- */
   const filters = $$('.filter'), cards = $$('.pcard'), groups = $$('.pgroup');
