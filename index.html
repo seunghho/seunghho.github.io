@@ -15,7 +15,7 @@
 <meta property="og:title" content="Seungho Lee · Efficient AI Research">
 <meta property="og:description" content="How much computation and data does a model really need? Efficient reasoning, data-efficient learning, and reasoning for embodied agents.">
 <meta property="og:image" content="https://seunghho.github.io/assets/profile.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a78d6'/%3E%3Cstop offset='.6' stop-color='%236250d6'/%3E%3Cstop offset='1' stop-color='%231baf7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='27' font-weight='700' text-anchor='middle' fill='white'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400..600&family=Noto+Sans+KR:wght@400..700&display=swap">
@@ -101,7 +101,6 @@ svg.i{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .nav .wrap{display:flex;align-items:center;gap:12px;height:60px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
 .brand:hover{text-decoration:none}
-.mark{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;background:linear-gradient(135deg,var(--g1),var(--g2) 60%,var(--g3))}
 .nav-links{display:flex;gap:2px;margin-left:auto}
 .nav-links a{color:var(--ink-2);font-size:14px;padding:6px 10px;border-radius:8px}
 .nav-links a:hover{color:var(--ink);background:var(--surface-2);text-decoration:none}
@@ -124,8 +123,7 @@ svg.i{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .role{font-size:clamp(17px,1.9vw,21px);font-weight:600;letter-spacing:-.01em;margin:0;background:linear-gradient(100deg,var(--g1),var(--g2) 60%,var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent;width:max-content;max-width:100%}
 .photo{grid-area:photo;position:relative;border-radius:22px;padding:3px;background:linear-gradient(135deg,var(--g1),var(--g2) 60%,var(--g3));box-shadow:var(--shadow)}
 .photo img{position:relative;display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:19px;background:#fff}
-.photo .mono{position:absolute;inset:3px;border-radius:19px;display:grid;place-items:center;background:var(--surface);color:var(--ink);font-weight:650;font-size:32px}
-@media(max-width:759px){.photo{border-radius:18px}.photo img,.photo .mono{border-radius:15px}}
+@media(max-width:759px){.photo{border-radius:18px}.photo img{border-radius:15px}}
 .bio{grid-area:bio;font-size:clamp(16px,1.5vw,17.5px);color:var(--ink-2);line-height:1.7;max-width:44em}
 .bio p{margin:0 0 14px}
 .bio b{color:var(--ink);font-weight:600}
@@ -369,7 +367,7 @@ footer button:hover{color:var(--ink)}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Seungho Lee, home"><span class="mark" aria-hidden="true">SL</span><span>Seungho Lee</span></a>
+    <a class="brand" href="#top" aria-label="Seungho Lee, home"><span>Seungho Lee</span></a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#news"><span class="en">News</span><span class="ko">소식</span></a>
       <a href="#projects"><span class="en">Projects</span><span class="ko">프로젝트</span></a>
@@ -396,7 +394,6 @@ footer button:hover{color:var(--ink)}
         <p class="role"><span class="en">Undergraduate Student @ HUFS</span><span class="ko">한국외국어대학교 학부생 · 학부 연구 인턴</span></p>
       </div>
       <div class="photo reveal">
-        <span class="mono" aria-hidden="true">SL</span>
         <img src="assets/profile.jpg" alt="Portrait of Seungho Lee" width="640" height="640" decoding="async" onerror="this.remove()">
       </div>
       <div class="bio reveal">
