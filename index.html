@@ -138,8 +138,10 @@ svg.i{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .cta{grid-area:cta;display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
 .btn{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;font-size:15px;font-weight:500;border:1px solid var(--line-2);color:var(--ink);background:var(--surface);transition:transform .15s,background-color .15s;cursor:pointer}
 .btn:hover{text-decoration:none;transform:translateY(-1px);background:var(--surface-2)}
-.btn.primary{background:var(--btn-bg);color:var(--btn-ink);border-color:transparent}
+.btn.primary{background:var(--btn-bg);color:var(--btn-ink);border-color:transparent;transition:transform .15s,background-color .3s,color .3s}
 .btn.primary:hover{background:var(--btn-bg);opacity:.9}
+.btn.primary.copied,.btn.primary.copied:hover{background:color-mix(in srgb,var(--s3) 75%,#000);color:#fff;opacity:1;animation:pop .35s ease}
+@keyframes pop{40%{transform:scale(1.06)}}
 
 /* home sections */
 section[id]{scroll-margin-top:72px}
@@ -393,7 +395,6 @@ footer button:hover{color:var(--ink)}
       <a href="#experience"><span class="en">Experience</span><span class="ko">연구 경험</span></a>
     </nav>
     <div class="nav-tools">
-      <a class="tool" href="assets/Seungho_Lee_CV.pdf" target="_blank" rel="noopener">CV</a>
       <button class="tool" id="lang" type="button" lang="ko">한국어</button>
       <button class="tool sq" id="theme" type="button" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg></button>
     </div>
@@ -424,7 +425,7 @@ footer button:hover{color:var(--ink)}
         <p><span class="en">I'm interested in building AI that <b>uses only what it needs</b>: models that spend computation where a problem demands it, learn from just the data they need, and turn their reasoning into reliable action in the real world.</span><span class="ko">궁극적으로는 <b>필요한 만큼만 쓰는 AI</b>를 만들고 싶습니다. 문제에 필요한 곳에만 계산을 쓰고, 필요한 데이터만으로 배우며, 추론을 실제 세계의 믿을 수 있는 행동으로 옮기는 모델입니다.</span></p>
       </div>
       <div class="cta reveal">
-        <a class="btn primary" href="mailto:hufs24lsh@hufs.ac.kr"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="en">Get in touch</span><span class="ko">연락하기</span></a>
+        <a class="btn primary" id="contact" href="mailto:hufs24lsh@hufs.ac.kr" aria-live="polite"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="en">Get in touch</span><span class="ko">연락하기</span></a>
         <a class="btn" href="assets/Seungho_Lee_CV.pdf" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>CV</a>
         <a class="btn" href="https://www.linkedin.com/in/seungholee05/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
       </div>
@@ -1092,6 +1093,20 @@ footer button:hover{color:var(--ink)}
   showVSR(false);
   redraws.push(() => { glossEl.textContent = lang === 'en' ? VSR[vi].gloss : ''; });
   new IntersectionObserver(([e], obs) => { if (e.isIntersecting) { showVSR(true); obs.disconnect(); } }, { threshold: 0.5 }).observe($('#vsr-fig'));
+
+  /* ---------- get in touch: the mail link also copies the address ---------- */
+  const contact = $('#contact');
+  let contactTimer;
+  contact.addEventListener('click', () => {
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(contact.getAttribute('href').slice(7)).then(() => {
+      const [en, ko] = $$('.en, .ko', contact);
+      en.textContent = 'Email copied'; ko.textContent = '이메일 복사됨';
+      contact.classList.remove('copied'); void contact.offsetWidth; contact.classList.add('copied'); // reflow restarts the pop on a repeat click
+      clearTimeout(contactTimer);
+      contactTimer = setTimeout(() => { en.textContent = 'Get in touch'; ko.textContent = '연락하기'; contact.classList.remove('copied'); }, 2000);
+    }, () => {});
+  });
 
   /* ---------- activities: expandable entry ---------- */
   $$('.fold-btn').forEach(b => b.addEventListener('click', () => {
