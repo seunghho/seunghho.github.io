@@ -419,9 +419,9 @@ footer button:hover{color:var(--ink)}
         <p><span class="en">Hi! I'm an undergraduate student in Language &amp; AI at <b>Hankuk University of Foreign Studies (HUFS)</b> and a research intern at the <b>Language Intelligence Lab</b>, advised by <b>Prof. Jun-Hyung Park</b>.</span><span class="ko">안녕하세요! 저는 <b>한국외국어대학교</b> Language &amp; AI 융합학부에 재학 중이며, <b>박준형 교수님</b>이 지도하시는 <b>Language Intelligence Lab</b>에서 학부 연구 인턴으로 연구하고 있습니다.</span></p>
         <p><span class="en">My research focuses on making AI models efficient by understanding what they actually need: <b>how much computation and data does a model really need to perform well, and how can we give it just that?</b> I look inside models during inference and training, and I measure real costs such as tokens and GPU energy alongside accuracy. My research interests span three directions:</span><span class="ko">제 연구는 모델에게 실제로 무엇이 필요한지 이해해 AI를 효율적으로 만드는 데 초점을 둡니다. <b>모델이 잘 작동하려면 계산과 데이터가 실제로 얼마나 필요하고, 어떻게 딱 그만큼만 줄 수 있을까?</b> 이를 위해 추론과 학습 중 모델 내부를 들여다보고, 정확도와 함께 토큰·GPU 에너지 같은 실제 비용을 측정합니다. 관심 분야는 다음 세 방향입니다.</span></p>
         <ul class="focus">
-          <li><span class="ic-tile" aria-hidden="true"><svg class="ic"><use href="#ic-reasoning"/></svg></span><b><span class="en">Efficient Reasoning</span><span class="ko">효율적 추론</span></b><span class="desc"><span class="en">Models increasingly think before they answer, yet more test-time computation is not always better. I am interested in how much a model needs to think and how cheaply it can do so, with statistical guarantees on the quality of its answers: allocating computation to the problems that need it, compressing long chains of thought, reasoning in latent space, or stopping once its internal states show the answer is settled.</span><span class="ko">모델은 점점 더 ‘생각한 뒤’ 답하지만, 테스트 시점의 계산이 많다고 늘 좋은 것은 아닙니다. 저는 모델이 얼마나 생각해야 하는지, 그리고 답의 품질을 통계적으로 보장하면서 그 계산을 얼마나 가볍게 할 수 있는지에 관심이 있습니다. 문제에 맞춘 계산 배분, 긴 chain-of-thought의 압축, latent space에서의 추론, 내부 상태로 답이 정해졌음을 알아채고 멈추는 방법 등이 그 예입니다.</span></span></li>
-          <li><span class="ic-tile" aria-hidden="true"><svg class="ic"><use href="#ic-data"/></svg></span><b><span class="en">Data-Efficient Learning</span><span class="ko">데이터 효율적 학습</span></b><span class="desc"><span class="en">The value of data depends on the model and the stage of training. I am interested in data-centric learning: selecting and curating data with training dynamics, condensing large datasets through distillation, and synthesizing data where it is scarce, while accounting for the relations and structure among data and for under-resourced languages such as Korean.</span><span class="ko">데이터의 가치는 모델과 학습 단계에 따라 달라집니다. 저는 data-centric 학습에 관심이 있습니다. training dynamics로 데이터를 선택하고 정제하며, 큰 데이터셋을 distillation으로 압축하고, 부족한 곳에는 데이터를 합성하는 일입니다. 이때 데이터 사이의 관계와 구조, 그리고 한국어처럼 데이터가 부족한 언어까지 함께 고려하고 싶습니다.</span></span></li>
-          <li><span class="ic-tile" aria-hidden="true"><svg class="ic"><use href="#ic-embodied"/></svg></span><b><span class="en">Reasoning for Embodied Agents</span><span class="ko">Embodied Agent를 위한 추론</span></b><span class="desc"><span class="en">I want to connect language reasoning to perception and action. I am interested in vision-language-action models and hierarchical agents that ground language in 3D scenes and objects, plan at the right level of abstraction, and act quickly and reliably in the real world, from drones to robot manipulation.</span><span class="ko">언어로 하는 추론을 인식과 행동으로 잇고 싶습니다. 언어를 3D 장면과 물체에 grounding하고, 알맞은 추상화 수준에서 계획하며, 실제 세계에서 빠르고 믿을 수 있게 행동하는 vision-language-action 모델과 계층적 에이전트에 관심이 있습니다. 드론부터 로봇 조작까지가 그 무대입니다.</span></span></li>
+          <li><span class="ic-tile" aria-hidden="true"><svg class="ic"><use href="#ic-reasoning"/></svg></span><b><span class="en">Efficient Reasoning</span><span class="ko">효율적 추론</span></b><span class="desc"><span class="en">Models increasingly think before they answer, yet more test-time computation is not always better. I am interested in how much a model needs to think and how cheaply it can do so, with statistical guarantees on the quality of its answers.</span><span class="ko">모델은 점점 더 ‘생각한 뒤’ 답하지만, 테스트 시점의 계산이 많다고 늘 좋은 것은 아닙니다. 저는 모델이 얼마나 생각해야 하는지, 그리고 답의 품질을 통계적으로 보장하면서 그 계산을 얼마나 가볍게 할 수 있는지에 관심이 있습니다.</span></span></li>
+          <li><span class="ic-tile" aria-hidden="true"><svg class="ic"><use href="#ic-data"/></svg></span><b><span class="en">Data-Efficient Learning</span><span class="ko">데이터 효율적 학습</span></b><span class="desc"><span class="en">The value of data depends on the model and the stage of training. I am interested in data-centric learning: deciding which data a model should learn from, and how much, using its training dynamics.</span><span class="ko">데이터의 가치는 모델과 학습 단계에 따라 달라집니다. 저는 training dynamics를 바탕으로 모델이 어떤 데이터를 얼마나 배워야 하는지 정하는 data-centric 학습에 관심이 있습니다.</span></span></li>
+          <li><span class="ic-tile" aria-hidden="true"><svg class="ic"><use href="#ic-embodied"/></svg></span><b><span class="en">Reasoning for Embodied Agents</span><span class="ko">Embodied Agent를 위한 추론</span></b><span class="desc"><span class="en">I want to connect language reasoning to perception and action. I am interested in vision-language-action models and hierarchical agents that ground language in 3D scenes and objects, plan at the right level of abstraction, and act quickly and reliably in the real world.</span><span class="ko">언어로 하는 추론을 인식과 행동으로 잇고 싶습니다. 언어를 3D 장면과 물체에 grounding하고, 알맞은 추상화 수준에서 계획하며, 실제 세계에서 빠르고 믿을 수 있게 행동하는 vision-language-action 모델과 계층적 에이전트에 관심이 있습니다.</span></span></li>
         </ul>
         <p><span class="en">I'm interested in building AI that <b>uses only what it needs</b>: models that spend computation where a problem demands it, learn from just the data they need, and turn their reasoning into reliable action in the real world.</span><span class="ko">궁극적으로는 <b>필요한 만큼만 쓰는 AI</b>를 만들고 싶습니다. 문제에 필요한 곳에만 계산을 쓰고, 필요한 데이터만으로 배우며, 추론을 실제 세계의 믿을 수 있는 행동으로 옮기는 모델입니다.</span></p>
       </div>
@@ -461,13 +461,7 @@ footer button:hover{color:var(--ink)}
     </div>
     <div class="pgroup">
     <p class="group-label"><span class="en">Research</span><span class="ko">연구</span></p>
-    <div class="pgrid three">
-      <a class="pcard reveal" href="#projects/data-selection" data-tags="data">
-        <h3>Recipe-Adaptive Data Selection for Efficient LLM Fine-Tuning</h3>
-        <p class="pc-note"><span class="en">Completed · Open-source release</span><span class="ko">완료 · 코드 공개</span></p>
-        <div class="tags"><span class="tagbox"><svg class="ic" aria-hidden="true"><use href="#ic-data"/></svg><span class="en">Data-Efficient Learning</span><span class="ko">데이터 효율적 학습</span></span></div>
-        <span class="pc-go"><span class="date"><span class="en">Jul – Nov 2026</span><span class="ko">2026.07 – 2026.11</span></span><span class="en">View project</span><span class="ko">자세히 보기</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
-      </a>
+    <div class="pgrid">
       <a class="pcard reveal" href="#projects/spatial-cot" data-tags="reasoning embodied">
         <h3>Efficient Long Chain-of-Thought Reasoning for 3D Spatial QA via Hidden-State Probing</h3>
         <div class="tags"><span class="tagbox"><svg class="ic" aria-hidden="true"><use href="#ic-reasoning"/></svg><span class="en">Efficient Reasoning</span><span class="ko">효율적 추론</span></span><span class="tagbox"><svg class="ic" aria-hidden="true"><use href="#ic-embodied"/></svg><span class="en">Embodied Agents</span><span class="ko">Embodied Agent</span></span></div>
@@ -482,7 +476,12 @@ footer button:hover{color:var(--ink)}
     </div>
     <div class="pgroup">
     <p class="group-label"><span class="en">Earlier projects</span><span class="ko">이전 프로젝트</span></p>
-    <div class="pgrid">
+    <div class="pgrid three">
+      <a class="pcard reveal" href="#projects/data-selection" data-tags="data">
+        <h3>Recipe-Adaptive Data Selection for Efficient LLM Fine-Tuning</h3>
+        <div class="tags"><span class="tagbox"><svg class="ic" aria-hidden="true"><use href="#ic-data"/></svg><span class="en">Data-Efficient Learning</span><span class="ko">데이터 효율적 학습</span></span></div>
+        <span class="pc-go"><span class="date"><span class="en">Jul – Nov 2026</span><span class="ko">2026.07 – 2026.11</span></span><span class="en">View project</span><span class="ko">자세히 보기</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
       <a class="pcard reveal" href="#projects/klook" data-tags="nlp">
         <h3>Enhancing Multilingual Localization Quality via Metric-Driven Prompt Refinement</h3>
         <p class="pc-note"><span class="en">In Collaboration with Klook</span><span class="ko">Klook 산학협력</span></p>
@@ -610,7 +609,7 @@ footer button:hover{color:var(--ink)}
     <!-- 1. Recipe-adaptive data selection -->
     <article class="project" id="data-selection" data-title="Recipe-Adaptive Data Selection for Efficient LLM Fine-Tuning" hidden>
       <header class="p-head">
-        <div class="p-meta"><span class="date"><span class="en">Jul – Nov 2026</span><span class="ko">2026.07 – 2026.11</span></span><a class="tagbox" href="#tag/data"><svg class="ic" aria-hidden="true"><use href="#ic-data"/></svg><span class="en">Data-Efficient Learning</span><span class="ko">데이터 효율적 학습</span></a><span class="badge"><span class="en">Completed</span><span class="ko">완료</span></span><span class="badge"><span class="en">Open source</span><span class="ko">코드 공개</span></span></div>
+        <div class="p-meta"><span class="date"><span class="en">Jul – Nov 2026</span><span class="ko">2026.07 – 2026.11</span></span><a class="tagbox" href="#tag/data"><svg class="ic" aria-hidden="true"><use href="#ic-data"/></svg><span class="en">Data-Efficient Learning</span><span class="ko">데이터 효율적 학습</span></a></div>
         <h2 class="p-title" tabindex="-1">Recipe-Adaptive Data Selection for Efficient LLM Fine-Tuning</h2>
         <p class="p-sub">Energy-Efficient LLM Data Selection via Asymmetric Prefix Extrapolation</p>
         <p class="p-authors"><b>Seungho Lee</b>, Suchan Yang</p>
@@ -752,7 +751,7 @@ footer button:hover{color:var(--ink)}
     <!-- 4. Klook -->
     <article class="project" id="klook" data-title="Enhancing Multilingual Localization Quality via Metric-Driven Prompt Refinement" hidden>
       <header class="p-head">
-        <div class="p-meta"><span class="date"><span class="en">Sep – Nov 2025</span><span class="ko">2025.09 – 2025.11</span></span><a class="tagbox nlp" href="#tag/nlp"><svg class="ic" aria-hidden="true"><use href="#ic-nlp"/></svg><span class="en">Applied NLP</span><span class="ko">응용 NLP</span></a><span class="badge"><span class="en">Completed</span><span class="ko">완료</span></span></div>
+        <div class="p-meta"><span class="date"><span class="en">Sep – Nov 2025</span><span class="ko">2025.09 – 2025.11</span></span><a class="tagbox nlp" href="#tag/nlp"><svg class="ic" aria-hidden="true"><use href="#ic-nlp"/></svg><span class="en">Applied NLP</span><span class="ko">응용 NLP</span></a></div>
         <h2 class="p-title" tabindex="-1">Enhancing Multilingual Localization Quality via Metric-Driven Prompt Refinement</h2>
         <div class="partner"><span><span class="en">In collaboration with</span><span class="ko">산학협력</span></span><img src="assets/klook-logo.png" alt="Klook" width="360" height="101" decoding="async"></div>
         <p class="p-pitch"><span class="en">Klook’s existing pipeline translated travel content into many languages with a single Gemini prompt, which produced unnatural or wrong output in some languages. I analyzed real outputs, classified the error types, and refined the prompts language by language against a quality metric.</span><span class="ko">Klook의 기존 파이프라인은 하나의 Gemini 프롬프트로 여행 콘텐츠를 여러 언어로 번역했고, 일부 언어에서 부자연스럽거나 틀린 결과가 나왔습니다. 실제 출력을 분석해 오류 유형을 분류하고, 품질 지표를 기준으로 언어별 프롬프트를 개선했습니다.</span></p>
@@ -795,7 +794,7 @@ footer button:hover{color:var(--ink)}
     <!-- 5. VSR -->
     <article class="project" id="vsr" data-title="Visual Speech Recognition with T5-Based Neural Post-Editing for Robust Text Recovery" hidden>
       <header class="p-head">
-        <div class="p-meta"><span class="date"><span class="en">Jun – Sep 2025</span><span class="ko">2025.06 – 2025.09</span></span><a class="tagbox nlp" href="#tag/nlp"><svg class="ic" aria-hidden="true"><use href="#ic-nlp"/></svg><span class="en">Applied NLP</span><span class="ko">응용 NLP</span></a><span class="badge"><span class="en">Encouragement Award</span><span class="ko">장려상</span></span></div>
+        <div class="p-meta"><span class="date"><span class="en">Jun – Sep 2025</span><span class="ko">2025.06 – 2025.09</span></span><a class="tagbox nlp" href="#tag/nlp"><svg class="ic" aria-hidden="true"><use href="#ic-nlp"/></svg><span class="en">Applied NLP</span><span class="ko">응용 NLP</span></a></div>
         <h2 class="p-title" tabindex="-1">Visual Speech Recognition with T5-Based Neural Post-Editing for Robust Text Recovery</h2>
         <p class="p-sub"><span class="en">Team rAIse (5 members) · SOWON HOPE Expo 2025, Kwangwoon Univ.</span><span class="ko">rAIse 팀 (5인) · 2025 소원 H.O.P.E. 창의보조공학 경진대회, 광운대학교</span></p>
         <p class="p-links"><a class="btn" href="assets/VSR_poster.pdf" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg><span class="en">Poster</span><span class="ko">포스터</span></a></p>
